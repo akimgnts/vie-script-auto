@@ -1,0 +1,25 @@
+name: Lancer le script 4 fois par jour
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # À 00h, 06h, 12h et 18h chaque jour
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer les fichiers du repo
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Installer les bibliothèques nécessaires
+        run: pip install requests pandas gspread oauth2client
+
+      - name: Lancer le script VIE
+        run: python VIE_Scraping.py
