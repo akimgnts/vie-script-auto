@@ -25,7 +25,8 @@ from gspread.exceptions import SpreadsheetNotFound
 
 # === CONFIGURATION ===
 DATA_DIR = "/Users/akimguentas/Desktop/PROJET VIE"
-SPREADSHEET_NAME = "Offres VIE - Database"CREDENTIALS_FILE = "/Users/akimguentas/Desktop/PROJET VIE/vie-project-455522-0c2604736a99.json"
+SPREADSHEET_NAME = "Offres VIE - Database"
+CREDENTIALS_FILE = "/Users/akimguentas/Desktop/PROJET VIE/vie-project-455522-0c2604736a99.json"
 MAX_WORKERS = 5
 
 SEARCH_API_URL = "https://civiweb-api-prd.azurewebsites.net/api/Offers/search"
